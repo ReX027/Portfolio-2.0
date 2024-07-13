@@ -1,0 +1,80 @@
+.HomeSection{
+    // margin: 2vh 2vh;
+    width: 100%;
+    height: 100%;
+    // border: 2px solid red;
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &.modal-open {
+        pointer-events: none;
+        opacity: 0.7;
+      }
+    .LeftSection{
+        position: relative;
+        // border:2px solid black;
+        // visibility:hidden;
+        width: 50%;
+        .Main-Heading{
+            display:flex;
+            flex-direction:column;
+            margin:10px 0;
+            span:first-child{
+                font-size:28px;
+                font-weight: 500;
+            }
+            p{
+                color:rgb(129, 134, 143);
+                margin-top: 10px;
+            }
+        }
+        .heading{
+            display:flex;
+            flex-direction: column;
+            // border:1px solid green;
+            min-width:100%;
+            position: absolute;
+            top:20%;
+            h1{
+                font-size:28px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            span{
+                color:rgb(129, 134, 143);
+            }
+            p{
+                color:rgb(129, 134, 143);
+                margin-top: 10px;
+            }
+        }
+        .buttons{
+            position: absolute;
+            // border:2px solid red;
+            top:52%;
+            min-width:200px;
+            min-height:20px;
+            display: flex;
+            justify-content:flex-start;
+            button{
+                border:1px solid rgb(175, 162, 162);
+                background-color:rgba(249, 250, 251, 0.705);
+                border-radius:5px;
+                padding: 6px;
+                font-size:14px;
+                margin:0 2px;
+                &:hover{
+                    background-color:rgb(65, 61, 65);
+                    color:white;
+                }
+            }
+        }
+    }
+    .RightSection{
+        // border:2px solid red;
+
+        margin:80px;
+    }
+}

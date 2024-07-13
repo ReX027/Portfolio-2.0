@@ -1,0 +1,126 @@
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  height: 96vh;
+  margin:2vh 2vh;
+  width: 180px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;
+
+  .logo {
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-left: 15px;
+
+    .logo_img {
+      margin-right: 7px;
+    }
+  }
+  .navbar {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      li {
+        transition: 0.2s;
+
+        a {
+          font-size: 14px;
+          color: #4e5969;
+          line-height: 14px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 13px 17px;
+          height: 50px;
+
+          &:hover {
+            color: #5c27c0;
+          }
+          svg {
+            margin: 0 10px 0 0;
+            transition: 0.2s;
+          }
+        }
+
+        // &.logout {
+        //   a {
+        //     color: red;
+        //   }
+        // }
+
+        &:hover,
+        &.active {
+          background-color: #f8f4ff;
+          a {
+            color: #5c27c0;
+            svg {
+              path {
+                fill: #5c27c0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.hide_sidebar {
+    width: 90px;
+
+    .logo_text {
+      display: none;
+    }
+
+    .navbar {
+      ul {
+        li {
+          a {
+            font-size: 0;
+            justify-content: center;
+
+            svg {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: 80%;
+      padding-left: 0;
+    }
+
+    .toggle_btn {
+      right: -38px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .dasharrow {
+    margin-right: 20px;
+  }
+
+  .first_li {
+    display: flex;
+  }
+
+  .toggle_btn {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 30px;
+    right: -26px;
+    transition: 0.2s;
+  }
+
+  .line {
+    border: 0;
+    border-bottom: solid 1px #e5e2ea;
+    margin: 25px 0;
+  }
+}

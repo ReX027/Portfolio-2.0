@@ -1,0 +1,89 @@
+.aboutPage {
+    width: 100%;
+    padding: 20px;
+    margin: 2vh 2vh;
+  }
+  
+  .aboutHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutHeader h1 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    line-height: 1.6;
+    color: rgb(129, 134, 143);
+  }
+  
+  .experienceItem {
+    margin-top: 20px;
+  }
+  
+  .experienceHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .experienceHeader h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .descriptionList {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .descriptionList li {
+    margin-bottom: 8px;
+    color: rgb(129, 134, 143);
+  }
+  
+  @media (min-width: 768px) {
+    .cardContainer {
+      flex-direction: row; /* Cards in a row for larger screens */
+      flex-wrap: wrap; /* Wrap cards if space is limited */
+    }
+  
+    .card {
+      flex: 1 1 45%; /* Adjust card width for two cards per row */
+      max-width: 45%; /* Ensure max width for flexibility */
+    }
+  }
+  
