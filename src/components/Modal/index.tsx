@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import "./index.scss"; // Create this CSS file for styling
+import "./index.scss";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
 
 function Modal({ open, onClose }) {
