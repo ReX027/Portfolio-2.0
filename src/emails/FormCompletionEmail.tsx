@@ -34,7 +34,7 @@ export default function FormCompletionEmail({
           <Text style={paragraph}>
             Here is a copy of your message for your reference:
           </Text>
-          <Text style={messageStyle}>"{message}"</Text>
+          <Text style={messageStyle}>&quot;{message}&quot;</Text>
 
           <Text style={paragraph}>
             Best regards,
@@ -80,7 +80,7 @@ const messageStyle = {
   padding: "10px",
   borderRadius: "5px",
   marginBottom: "20px",
-  whiteSpace: "pre-wrap", // This ensures that new lines in the message are preserved.
+  whiteSpace: "pre-wrap",
 };
 // const button = {
 //   backgroundColor: "#007BFF",

@@ -21,7 +21,7 @@ function Home() {
   //     ease: "power3.out",
   //   });
   // });
-  console.log("ad", openModal);
+  //   console.log("ad", openModal);
   const handleModal = () => {
     setOpenModal(true);
   };
@@ -66,7 +66,7 @@ function Home() {
           <div className="heading" ref={aboutMeRef}>
             <h1>About Me</h1>
             <span>
-              Hi There! I'm <b>Tushar Vaid</b> a passionate Frontend Engineer
+              Hi There! I am <b>Tushar Vaid</b> a passionate Frontend Engineer
               with over 6 months of experience. I specialize in building modern,
               responsive, and user-friendly web applications using the latest
               technologies.
@@ -74,7 +74,7 @@ function Home() {
             <p>
               In my free time, I enjoy exploring new programming languages,
               contributing to open-source projects, and staying up-to-date with
-              the latest industry trends. I'm always eager to learn and take on
+              the latest industry trends. I am always eager to learn and take on
               new challenges.
             </p>
           </div>

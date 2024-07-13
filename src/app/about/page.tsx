@@ -33,8 +33,6 @@ const AboutPage = () => {
     cardRefs.current.forEach((card, index) => {
       tl.from(card, { delay: 0.2 * index });
     });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
