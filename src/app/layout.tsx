@@ -22,12 +22,7 @@ export default function RootLayout({
         <div>
           <div
             className="flex"
-            style={{
-              overflow: "hidden",
-              width: "100vw",
-              height: "100vh",
-              // backgroundColor: "red",
-            }}
+           
           >
             <div>
               <Navbar />

@@ -1,38 +1,37 @@
-// src/app/projects/index.module.scss
-
 .projectsPage {
-  display: flex;
-  align-items: center;
-//   height: 100vh;
-  width:100%;
-  margin: 2vh 2vh;
-//   border: 2px solid red;
-}
-
-.mainContent {
-  width: 100%;
-//   max-width: 1200px; // Adjust as needed
-//   border:2px solid green;
-}
-
-.project {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-//   border:2px solid green;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    align-items: center;
+    width: 100%;
+    padding: 2vh; /* Adjust padding for spacing */
+    margin-top: 2vh;
+  }
+  
+  .mainContent {
+    width: 100%; /* Ensure content takes full width */
+    max-width: calc(100vw - 4vh); /* Subtract total horizontal padding */
+    margin: 0 auto; /* Center align content */
+  }
+  
+  .project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    // margin-bottom: 4vh; /* Adjust margin between projects */
+  }
+  
   .imageWrapper {
     position: relative;
     width: 100%;
-    height:700px;
-    // border:2px solid red;
-    // opacity:0.9;
+    height: 700px; 
+    
   }
-
+  
   .overlay {
     position: absolute;
     top: 0;
@@ -43,24 +42,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.6); // Adjust overlay background as needed
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     color: #fff;
     opacity: 1;
     transition: opacity 0.3s ease;
-    // border:2px solid red;
-    // &:hover {
-    //   opacity: 1;
-    // }
-
+  
     h2 {
       margin-bottom: 10px;
     }
-
+  
     p {
       margin-bottom: 10px;
     }
-
+  
     .liveDemoButton {
       display: inline-block;
       padding: 10px 20px;
@@ -69,10 +64,24 @@
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s ease;
-
+  
       &:hover {
         background-color: #005bb5;
       }
     }
   }
-}
+  
+  @media (max-width: 768px) {
+    .project {
+      margin-bottom: 2vh; /* Adjust margin for mobile view */
+    }
+  
+    .imageWrapper {
+      height: 800px; /* Adjust height for smaller screens */
+    }
+  
+    .overlay {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  

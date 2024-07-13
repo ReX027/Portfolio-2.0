@@ -1,7 +1,11 @@
 .aboutPage {
     width: 100%;
     padding: 20px;
-    margin: 2vh 2vh;
+    margin: 2vh 0vh;
+    overflow-x: hidden;
+    // border: 2px solid red;
+    // height:80%;
+    min-height: calc(100vh - 4vh - 40px);
   }
   
   .aboutHeader {
