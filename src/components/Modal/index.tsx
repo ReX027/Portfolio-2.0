@@ -4,7 +4,7 @@ import "./index.scss";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
-import { Tooltip } from "react-tooltip";
+import { Tooltip } from "react-tooltip"; //test
 
 function Modal({ open, onClose }) {
   gsap.registerPlugin(useGSAP);
