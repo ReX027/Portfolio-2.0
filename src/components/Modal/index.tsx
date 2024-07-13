@@ -1,15 +1,18 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import "./index.scss";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
 
-function Modal({ open, onClose }) {
-  gsap.registerPlugin(useGSAP);
+interface ModalProps {
+  open: boolean;
+  onClose: () => void;
+}
 
-  const modalRef = useRef();
+function Modal({ open, onClose }: ModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
     if (open) {
       gsap.to(modalRef.current, {
@@ -29,6 +32,7 @@ function Modal({ open, onClose }) {
       });
     }
   }, [open]);
+
   return (
     <>
       {open && (

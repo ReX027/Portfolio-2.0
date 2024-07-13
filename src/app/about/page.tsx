@@ -6,7 +6,6 @@ import styles from "./index.module.scss";
 import { useGSAP } from "@gsap/react";
 
 const AboutPage = () => {
-  gsap.registerPlugin(useGSAP);
   const experiences = [
     {
       company: "Rework AI",
@@ -23,7 +22,7 @@ const AboutPage = () => {
     // Add more experience objects as needed
   ];
 
-  const cardRefs = useRef([]);
+  const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useGSAP(() => {
     // Create a timeline instance
@@ -50,7 +49,12 @@ const AboutPage = () => {
         <h1>About Me</h1>
       </div>
       <div className={styles.cardContainer}>
-        <div ref={(el) => (cardRefs.current[0] = el)} className={styles.card}>
+        <div
+          ref={(el) => {
+            if (el) cardRefs.current[0] = el;
+          }}
+          className={styles.card}
+        >
           <h2>Personal Information</h2>
           <p>
             I am Tushar Vaid, a Frontend Engineer with a passion for developing
@@ -66,7 +70,12 @@ const AboutPage = () => {
             interested in backend technologies and open-source contributions.
           </p>
         </div>
-        <div ref={(el) => (cardRefs.current[1] = el)} className={styles.card}>
+        <div
+          ref={(el) => {
+            if (el) cardRefs.current[1] = el;
+          }}
+          className={styles.card}
+        >
           <h2>Experience</h2>
           {experiences.map((exp, index) => (
             <div key={index} className={styles.experienceItem}>

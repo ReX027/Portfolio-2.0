@@ -6,22 +6,10 @@ import "./index.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Modal from "../Modal/index";
+
 function Home() {
   const [openModal, setOpenModal] = useState(false);
-  gsap.registerPlugin(useGSAP);
 
-  //   const gsapRef = useRef();
-  // useGSAP(() => {
-  //   // Gsap code goes here
-  //   gsap.to(gsapRef.current, {
-  //     width: 500,
-  //     height: 500,
-  //     duration: 1,
-  //     delay: 0.5,
-  //     ease: "power3.out",
-  //   });
-  // });
-  //   console.log("ad", openModal);
   const handleModal = () => {
     setOpenModal(true);
   };
@@ -29,9 +17,10 @@ function Home() {
   const closeModal = () => {
     setOpenModal(false);
   };
-  const mainHeadingRef = useRef();
-  const aboutMeRef = useRef();
-  const buttonsRef = useRef();
+
+  const mainHeadingRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -84,10 +73,6 @@ function Home() {
               <button>Visit Github</button>
             </Link>
           </div>
-
-          {/* <div>
-          <h1>Want to know more about me</h1>
-        </div> */}
         </div>
         <div className="RightSection">
           <Image

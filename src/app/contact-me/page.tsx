@@ -5,7 +5,7 @@ import gsap from "gsap";
 import styles from "./index.module.scss";
 
 export default function ContactPage() {
-  const inputRef = useRef();
+  //   const inputRef = useRef();
   gsap.registerPlugin(useGSAP);
   useEffect(() => {
     // Animate the form container
