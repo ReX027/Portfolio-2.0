@@ -4,58 +4,62 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    position: relative;
-    width: 0%;
-    height: 0%;
-    background-color: white;
-    z-index: 1001;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px; /* Adjust as needed */
-}
-
-.modal-close-button {
-    position: absolute;
-    top: 0;
-    right: 50%; 
-    transform: translateX(50%); 
-    background: none;
-    // border: 1px solid black;
-    width:35px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1002;
-    color:'white';
-    &:hover{
-        background-color: rgb(211, 46, 46);
-    }
-   
-}
-
-.modal-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-#my-tooltip {
-    position: absolute;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    // border-radius: 4px;
-    font-size: 15px;
-    z-index: 9999; 
   }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  
+    .modal-close-area {
+      display: flex;
+      justify-content: flex-end;
+    //   padding: 10px;
+      background-color:rgb(43, 40, 40);
+      .modal-close-button {
+        background: none;
+        border: none;
+        font-size: 1.3rem;
+        padding: 0 5px;
+        color: rgba(255, 255, 255, 0.733);
+        cursor: pointer;
+        &:hover{
+          background-color: red;
+        }
+      }
+    }
+  
+    .modal-iframe {
+      width: 100%;
+      height: calc(100% - 30px); // Adjust height to account for close button area
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .modal-content {
+      width: 80%;
+      height: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content {
+      width: 90%;
+      height: 85%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-content {
+      width: 95%;
+      height: 80%;
+    }
+  }
+  

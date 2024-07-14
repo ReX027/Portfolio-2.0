@@ -1,11 +1,10 @@
 .aboutPage {
     width: 100%;
     padding: 20px;
-    margin: 2vh 0vh;
+    margin: 2vh 0; 
     overflow-x: hidden;
     // border: 2px solid red;
-    // height:80%;
-    min-height: calc(100vh - 4vh - 40px);
+    box-sizing: border-box; 
   }
   
   .aboutHeader {
@@ -83,11 +82,31 @@
     .cardContainer {
       flex-direction: row; /* Cards in a row for larger screens */
       flex-wrap: wrap; /* Wrap cards if space is limited */
+      gap: 20px; /* Adjust gap between cards */
     }
   
     .card {
-      flex: 1 1 45%; /* Adjust card width for two cards per row */
-      max-width: 45%; /* Ensure max width for flexibility */
+      flex: 1 1 calc(50% - 20px); /* Two cards per row with a gap of 20px */
+      max-width: calc(50% - 20px); /* Ensure max width for flexibility */
     }
   }
   
+  @media (min-width: 1024px) {
+    .cardContainer {
+      gap: 30px; /* Increase gap for larger screens */
+    }
+  
+    // .card {
+    //   flex: 1 1 calc(33.333% - 30px); /* Three cards per row with a gap of 30px */
+    //   max-width: calc(33.333% - 30px); /* Ensure max width for flexibility */
+    // }
+  }
+  
+//   .footer-navbar {
+//     display: none;
+//   }
+@media (max-width: 768px) {
+    .aboutPage {
+      padding-bottom: 80px; /* Ensure content above footer navbar is fully visible */
+    }
+  }

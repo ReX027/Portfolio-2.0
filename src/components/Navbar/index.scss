@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 100vw;
+    width: 100%;
     height: 60px;
     margin: 0;
     padding: 0;
@@ -139,7 +139,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: none;
-    // border:2px solid black;
+
     .logo {
       width: 100%;
       justify-content: center;
@@ -161,6 +161,7 @@
   }
 
   .footer-navbar {
+    // border:2px solid blue;
     display: flex;
     width: 100%;
     height: 60px;
@@ -172,6 +173,8 @@
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
+    // overflow:hidden;
+    
     ul {
       display: flex;
       justify-content: space-between;
@@ -179,7 +182,7 @@
       padding: 0 20px; /* Added padding to create space between links */
       margin: 0;
       list-style: none;
-
+      // border: 2px solid green;
       li {
         margin: 0 20px; /* Added margin to create space between links */
 

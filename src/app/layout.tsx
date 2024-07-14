@@ -19,20 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
-          <div
-            className="flex"
-           
-          >
-            <div>
-              <Navbar />
-            </div>
-            {children}
+        <div className="flex">
+          <div>
+            <Navbar />
           </div>
-          {/* <div>
+          {children}
+        </div>
+        {/* <div>
           <Footer />
           </div> */}
-        </div>
       </body>
     </html>
   );
