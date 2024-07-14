@@ -17,8 +17,8 @@ function Modal({ open, onClose }: ModalProps) {
     if (open) {
       gsap.to(modalRef.current, {
         duration: 0.3,
-        width: "60%",
-        height: "95%",
+        width: "100%",
+        height: "100%",
         opacity: 1,
         ease: "power1.out",
       });
